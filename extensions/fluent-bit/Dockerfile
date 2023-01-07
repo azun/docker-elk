@@ -1,0 +1,2 @@
+ARG FLUENT_BIT_VERSION
+FROM fluent/fluent-bit:${FLUENT_BIT_VERSION}

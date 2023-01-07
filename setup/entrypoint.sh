@@ -14,6 +14,7 @@ users_passwords=(
 	[logstash_internal]="${LOGSTASH_INTERNAL_PASSWORD:-}"
 	[kibana_system]="${KIBANA_SYSTEM_PASSWORD:-}"
 	[metricbeat_internal]="${METRICBEAT_INTERNAL_PASSWORD:-}"
+	[fluent_bit_internal]="${FLUENT_BIT_INTERNAL_PASSWORD:-}"
 	[filebeat_internal]="${FILEBEAT_INTERNAL_PASSWORD:-}"
 	[heartbeat_internal]="${HEARTBEAT_INTERNAL_PASSWORD:-}"
 	[monitoring_internal]="${MONITORING_INTERNAL_PASSWORD:-}"
@@ -24,6 +25,7 @@ declare -A users_roles
 users_roles=(
 	[logstash_internal]='logstash_writer'
 	[metricbeat_internal]='metricbeat_writer'
+	[fluent_bit_internal]='fluent_bit_writer'
 	[filebeat_internal]='filebeat_writer'
 	[heartbeat_internal]='heartbeat_writer'
 	[monitoring_internal]='remote_monitoring_collector'
@@ -36,6 +38,7 @@ declare -A roles_files
 roles_files=(
 	[logstash_writer]='logstash_writer.json'
 	[metricbeat_writer]='metricbeat_writer.json'
+	[fluent_bit_internal]='fluent_bit_writer.json'
 	[filebeat_writer]='filebeat_writer.json'
 	[heartbeat_writer]='heartbeat_writer.json'
 )
